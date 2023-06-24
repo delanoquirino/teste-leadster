@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { Container, Content, DividingBar, TfeaturedSection } from "./styles";
+import { Container, Content, TfeaturedSection } from "./styles";
 import Image from "next/image";
+import { DividerBar } from "../DividerBar";
 
 export const FeaturedSection = () => {
   return (
@@ -23,9 +24,9 @@ export const FeaturedSection = () => {
               ></Image>
             </span>
           </h1>
-          
+          <DividerBar/>
         </Content>
-        <DividingBar></DividingBar>
+       
         <p>
           Conheça as estratégias que <span>mudaram o jogo</span> e como
           aplicá-las no seu negócio

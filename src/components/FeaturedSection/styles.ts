@@ -4,7 +4,7 @@ export const TfeaturedSection = styled.div`
     background-color: var(--bg-secondary);
 `
 export const Container = styled.div`
-    padding: 6rem 0;
+    padding: 6em 0.5em;
     max-width: 1240px;
     margin: 0 auto;
     
@@ -12,12 +12,13 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
     p {
         margin-top: 15px;
         font-size:12px;
         span {
             font-weight: bold;
+           
         }
     }
 `
@@ -50,6 +51,7 @@ export const Content = styled.div`
         -webkit-text-fill-color: transparent;
         font-size: 60px;
         margin-bottom: 10px;
+        padding: 0 0.3em;
         
         
 
@@ -64,8 +66,3 @@ export const Content = styled.div`
 
 `   
 
-export const DividingBar = styled.div`
-        background-color: var(--color-border);
-        height: 2px;
-        width: 45%;
-`
