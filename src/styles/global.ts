@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --bg-primary: #FFFFFF;
         --bg-secondary: #F0F8FF;
-        --color-contrast: #1f76f0;
+        --color-contrast: #2c83fb;
         --color-border: #dce0e3;
     }
 
