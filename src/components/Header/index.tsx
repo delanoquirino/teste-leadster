@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <Theader>
         <Container>
-            <Image src="/logo.png" width={150} height={30} alt="logo leadster" />
+            <Image src="/logo.png" width={130} height={30} alt="logo leadster" />
         </Container>
     </Theader>
   )
