@@ -15,14 +15,14 @@ export const FeaturedSection = () => {
           <h2>Menos Conversinha</h2>
           <h1>
             Mais Conversão
-            <span>
+            
               <Image
                 src="/asset-header.png"
                 width={30}
                 height={20}
                 alt="logo leadster"
               ></Image>
-            </span>
+            
           </h1>
           <DividerBar/>
         </Content>

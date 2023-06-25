@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { styled } from "styled-components";
 
 export const SDemonstrationSection = styled.div`
@@ -11,6 +12,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 5em;
     
 `
@@ -22,6 +24,11 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 1em;
 `
+export const SImage = styled(Image)`
+  width: 100%;
+  height: auto;
+`
+
 export const Text = styled.div`
 
     h1 {
@@ -64,8 +71,7 @@ export const TextCard = styled.p`
     align-items: center;
     gap: 10px;
     font-size: 12px;
-    
-`
+    `
 export const TextRating = styled.p`
      display: flex;
     align-items: center;

@@ -55,10 +55,10 @@ export const Content = styled.div`
         
         
 
-        span {
+        img {
             position: absolute;
-            right: -10px;
-            top: -30px;
+            right: 5px;
+            top: 8px;
         }
     }
 

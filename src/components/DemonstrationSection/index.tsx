@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ButtonDemonstration, Container, Content, Rating, SDemonstrationSection, Text, TextCard, TextRating } from "./styles";
+import { ButtonDemonstration, Container, Content, Rating, SDemonstrationSection, SImage, Text, TextCard, TextRating } from "./styles";
 import Image from "next/image";
 import { DividerBar } from "../DividerBar";
 
@@ -9,12 +9,14 @@ export const DemonstrationSection = () => {
   return (
     <SDemonstrationSection>
       <Container>
-        <Image
-          src="/comparativo.png"
-          width={600}
-          height={600}
-          alt="imagem mostrando os resultados da estratégia Leadster "
-        />
+        <div>
+          <SImage
+            src="/comparativo.png"
+            width={800}
+            height={600}
+            alt="imagem mostrando os resultados da estratégia Leadster "
+          />
+        </div>
         
         <Content>
           <Text>
@@ -26,12 +28,14 @@ export const DemonstrationSection = () => {
           <DividerBar />
           <ButtonDemonstration>
             <button>Ver Demonstração</button>
-            <Image
-              src="/selo_RD.png"
-              width={150}
-              height={50}
-              alt="imagem mostrando os resultados da estratégia Leadster "
-            />
+            <div>
+              <Image
+                src="/selo_RD.png"
+                width={150}
+                height={50}
+                alt="imagem mostrando os resultados da estratégia Leadster "
+              />
+            </div>
           </ButtonDemonstration>
           <Rating>
             <TextCard>
