@@ -24,6 +24,10 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 1em;
 `
+export const ContainerImage = styled.div`
+  width: 50%;
+ 
+`
 export const SImage = styled(Image)`
   width: 100%;
   height: auto;
