@@ -57,7 +57,7 @@ export const Footer = () => {
       </Container>
 
       <DividerBar />
-      <Container>
+    
         <FooterCopy>
           <p>
             Copyright &#169; 2015 - 2022 Todos os direitos reservados <span>Leadster</span></p>
@@ -65,7 +65,7 @@ export const Footer = () => {
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 <Link href="https://leadster.com.br/termos_de_uso/" target="_blank">Termos de uso</Link>
           </p>
         </FooterCopy>
-      </Container>
+      
     </SectionFooter>
   );
 };

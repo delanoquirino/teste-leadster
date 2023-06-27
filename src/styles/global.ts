@@ -1,5 +1,4 @@
-
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -17,6 +16,12 @@ const GlobalStyle = createGlobalStyle`
         --link-hover:#0dcaf0;
     }
 
+        body {
+            @media only screen and (max-width: 880px) {
+                font-size: 70%;
+            }
+        }
+    
 `;
 
 export default GlobalStyle;

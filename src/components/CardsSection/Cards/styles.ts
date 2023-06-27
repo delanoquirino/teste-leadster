@@ -6,7 +6,14 @@ export const SCards = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+
+    @media only screen and (max-width: 680px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
    
+ 
+  }
     
 `
 export const ItemCard = styled.ul`

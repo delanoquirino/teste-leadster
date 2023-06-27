@@ -15,6 +15,12 @@ export const Filters = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
+
+    @media only screen and (max-width: 880px) {
+    flex-direction: column;
+    gap: 20px;
+
+  }
 `
 
 export const SPagination = styled(Pagination)`

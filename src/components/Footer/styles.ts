@@ -45,6 +45,16 @@ export const Container = styled.div`
       font-weight: 500;
     }
   }
+
+  @media only screen and (max-width: 680px) {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    
+    p {
+      margin-top: 1em;
+      font-size: 16px;
+    }
+  }
 `;
 
 export const ListSocialMedia = styled.li`
@@ -54,38 +64,44 @@ export const ListSocialMedia = styled.li`
 
 export const LinkSocialMidia = styled(Link)`
   color: var(--text-color);
-  padding: 0.8em;
+  padding: 0.5em;
   border-radius: 50%;
   background-color: var(--bg-secondary);
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 
   &:hover {
-   color: var(--bg-primary);
+    color: var(--bg-primary);
     background-color: var(--link-hover);
   }
 
   svg {
-   font-size: 25px;
-    
-   
+    font-size: 25px;
   }
 `;
 export const FooterCopy = styled.div`
-display: flex;
-justify-content: space-between;
-width: 100%;
+  padding: 2em 0.5em;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 
-a {
-  text-decoration: none;
-  color: var(--color-contrast);
-
-}
+  a {
+    text-decoration: none;
+    color: var(--color-contrast);
+  }
   p {
-    font-size: 16px;
-    
+    font-size: 12px;
   }
 
   span {
     color: var(--color-contrast);
+  }
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: column;
+    gap: 10px;
+    p {
+      font-size: 10px;
+    }
   }
 `;
