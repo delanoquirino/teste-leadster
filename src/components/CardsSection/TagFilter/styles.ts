@@ -1,5 +1,9 @@
 import { styled } from "styled-components";
 
+interface TagButtonProps {
+  isActive: boolean;
+}
+
 export const List = styled.ul`
   display: flex;
   gap: 5px;
@@ -9,27 +13,27 @@ export const List = styled.ul`
 `;
 
 export const ItemList = styled.li`
-  border: 1px solid black;
-  border-radius: 20px;
-  cursor: pointer;
+  
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  padding: 0 0.5em;
-  
-  &:hover {
-    color: var(--color-contrast);
-    border-color: var(--color-contrast);
-  }
-  
  
-
+  
 `;
 
+export const TagButton = styled.button<TagButtonProps>`
+  cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.5em 0.5em;
+    background-color: ${({ isActive }) => (isActive ? "var(--color-contrast)" : "transparent")};
+    border-color: ${({ isActive }) => (isActive ? "var(--color-contrast)" : "black")};
+    color: ${({ isActive }) => (isActive ? "white" : "black")};
 
-/*@media only screen and (max-width: 880px) {
-    flex-direction: column;
-    gap: 20px;
+  &:hover {
+    color: ${({ isActive }) => (isActive ? "white" : "var(--color-contrast)")};
+    border-color: var(--color-contrast);
+  }
 
-  }*/
+`;

@@ -1,18 +1,23 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { SOrderList } from "./styles";
 import { Select } from 'antd';
 
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
-};
+
 
 export const OrderList = () => {
+
+const [orderListItem, setOrderListItem] = useState('')
+
+  const handleChange = (value: string) => {
+    setOrderListItem(value);
+    
+  };
   return (
     <SOrderList>
       <span>Ordenar por</span>
       <Select
-      defaultValue="Data de Publicação"
+      defaultValue=""
       style={{ width: 170 }}
       onChange={handleChange}
       options={[
