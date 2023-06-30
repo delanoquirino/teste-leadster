@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 interface TagButtonProps {
-  isActive: boolean;
+  isactive: boolean;
 }
 
 export const List = styled.ul`
@@ -12,25 +12,24 @@ export const List = styled.ul`
 `;
 
 export const ItemList = styled.li`
-  
   display: flex;
   align-items: center;
   justify-content: center;
- 
 `;
 
 export const TagButton = styled.button<TagButtonProps>`
   cursor: pointer;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0.5em 0.5em;
-    background-color: ${({ isActive }) => (isActive ? "var(--color-contrast)" : "transparent")};
-    border-color: ${({ isActive }) => (isActive ? "var(--color-contrast)" : "black")};
-    color: ${({ isActive }) => (isActive ? "white" : "black")};
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.5em 0.5em;
+  background-color: ${({ isactive }) =>
+    isactive ? "var(--color-contrast)" : "transparent"};
+  border-color: ${({ isactive }) =>
+    isactive ? "var(--color-contrast)" : "black"};
+  color: ${({ isactive }) => (isactive ? "white" : "black")};
 
   &:hover {
-    color: ${({ isActive }) => (isActive ? "white" : "var(--color-contrast)")};
+    color: ${({ isactive }) => (isactive ? "white" : "var(--color-contrast)")};
     border-color: var(--color-contrast);
   }
-
 `;

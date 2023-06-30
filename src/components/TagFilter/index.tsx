@@ -36,7 +36,7 @@ export const TagFilter = ({ tagItem,setTagItem}: TagFilterProps) => {
   return (
     <List>
       {itens.map((item: ItemProps) => (
-        <ItemList key={item.id}><TagButton isActive={item.name === tagItem} onClick={() => handleTagItemClick(item.name)} >{item.name}</TagButton></ItemList>
+        <ItemList key={item.id}><TagButton isactive={item.name === tagItem} onClick={() => handleTagItemClick(item.name)} >{item.name}</TagButton></ItemList>
       ))}
     </List>
   );
