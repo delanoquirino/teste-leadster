@@ -9,17 +9,14 @@ export const List = styled.ul`
   gap: 5px;
   list-style: none;
   flex-wrap: wrap;
-
 `;
 
 export const ItemList = styled.li`
-  
   
   display: flex;
   align-items: center;
   justify-content: center;
  
-  
 `;
 
 export const TagButton = styled.button<TagButtonProps>`

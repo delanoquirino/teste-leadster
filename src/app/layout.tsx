@@ -1,9 +1,9 @@
 'use client'
 
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import GlobalStyle from "../styles/global";
 
-const inter = Inter({ subsets: ['latin'] })
+const Jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Teste Leadster',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={Jakarta.className}>
         <GlobalStyle/>
         {children}
         </body>
