@@ -16,12 +16,25 @@ export const SCards = styled.ul`
   }
     
 `
-export const ItemCard = styled.ul`
-    width: 100%;
-    border: none;
+export const ItemCard = styled.li`
+    
     border-radius: 20px;
     box-shadow: 8px 8px 10px #cfcfcf;
-    
+    list-style: none;
+
+    button {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      background-color: var(--bg-primary);
+
+      &:hover {
+        color: var(--color-contrast);
+        
+      }
+    }
+ 
     
 `
 export const Description = styled.div`
@@ -33,6 +46,7 @@ export const Thumbnail = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 20px;
+   
 `;
 
 export const VideoCard = styled.video`

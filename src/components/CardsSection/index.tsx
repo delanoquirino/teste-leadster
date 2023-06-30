@@ -2,22 +2,23 @@
 
 import React, { useState } from 'react'
 import { Container, Filters, SPagination, TCardsSection } from './styles'
-import { TagFilter } from './TagFilter'
-import { OrderList } from './OrderList'
+import { TagFilter } from '../TagFilter'
+import { OrderList } from '../OrderList'
 import { DividerBar } from '../DividerBar'
 import { Cards } from './Cards'
 
 export const CardsSection = () => {
   const [tagItem, setTagItem] = useState("");
+  const [orderItem, setOrderItem] = useState("");
   return (
     <TCardsSection>
       <Container>
         <Filters>
           <TagFilter tagItem={tagItem} setTagItem={setTagItem} />
-          <OrderList/>
+          <OrderList setOrderItem={setOrderItem}/>
         </Filters>
         <DividerBar/>
-        <Cards tagItem={tagItem} />
+        <Cards tagItem={tagItem}  orderItem={orderItem}/>
         <DividerBar/>
         <SPagination defaultCurrent={1} total={50} />
       </Container>
