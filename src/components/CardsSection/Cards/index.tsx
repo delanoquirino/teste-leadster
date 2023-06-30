@@ -14,7 +14,7 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
   const[openModal, setOpenModal] = useState(false)
   const [selectedCard, setSelectedCard] = useState<CardProps>({ id: 0, name: "", url: "" }); 
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 5;
+  const cardsPerPage = 6;
 
   const lowerCaseTagItem = tagItem.toLowerCase();
   let CardsItensFilter = CardsItens.filter(CardItem =>
@@ -41,12 +41,11 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
     
   };
 
-  // Cálculo para obter os índices dos cards da página atual
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = CardsItensFilter.slice(indexOfFirstCard, indexOfLastCard);
 
-  // Função para alterar a página atual
+
   const handleChangePage = (page: number) => {
     setCurrentPage(page);
   };

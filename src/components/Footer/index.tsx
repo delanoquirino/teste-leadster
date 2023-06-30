@@ -1,5 +1,5 @@
 "use client";
-import { Container, FooterCopy, FooterLogo, LinkSocialMidia, ListSocialMedia, SectionFooter } from "./styles";
+import { Container, FooterCopy, FooterLogo, LinkSocialMidia, ListFooter, ListSocialMedia, SectionFooter } from "./styles";
 import Image from "next/image";
 import { DividerBar } from "../DividerBar";
 
@@ -15,7 +15,7 @@ export const Footer = () => {
         <p>Transformando visitantes em clientes.</p>
       </FooterLogo>
       <Container>
-        <div>
+        <ListFooter>
           <p>Links Principais</p>
           <ul>
             <li>Home</li>
@@ -23,8 +23,8 @@ export const Footer = () => {
             <li>Preços</li>
             <li>Contato</li>
           </ul>
-        </div>
-        <div>
+        </ListFooter>
+        <ListFooter>
           <p>Cases</p>
           <ul>
             <li>Geração de Leads B2B</li>
@@ -32,8 +32,8 @@ export const Footer = () => {
             <li>Geração de Leads em Imobiliária</li>
             <li>Cases de Sucesso</li>
           </ul>
-        </div>
-        <div>
+        </ListFooter>
+        <ListFooter>
           <p>Materais</p>
           <ul>
             <li>Blog</li>
@@ -41,7 +41,7 @@ export const Footer = () => {
             <li>Guia Definitivo</li>
             <li>Materiais Gratuitos</li>
           </ul>
-        </div>
+        </ListFooter>
         <div>
           <p>Siga a Leadster</p>
           <ul>

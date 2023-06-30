@@ -105,3 +105,11 @@ export const FooterCopy = styled.div`
     }
   }
 `;
+export const ListFooter = styled.div`
+  li {
+    cursor: pointer;
+    &:hover {
+        color: var(--color-contrast);
+    }
+  }
+`;
