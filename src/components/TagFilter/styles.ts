@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 interface TagButtonProps {
-  isactive: boolean;
+  isactive: string | undefined;
 }
 
 export const List = styled.ul`
