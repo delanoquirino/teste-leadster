@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import { Description, ItemCard, SCards, StyledImage, Thumbnail } from "./styles";
+import { Description, ItemCard, SCards, SPagination, StyledImage, Thumbnail } from "./styles";
 import { CardsItens } from "@/data";
 import { Modal } from "@/components/Modal";
+import { DividerBar } from "@/components/DividerBar";
 
 type CardProps = {
   id: number;
   name: string;
-  url: string
+  url: string;
 };
 
 export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: string } ) => {
   const[openModal, setOpenModal] = useState(false)
-  const [selectedCard, setSelectedCard] = useState<CardProps>(); 
-
+  const [selectedCard, setSelectedCard] = useState<CardProps>({ id: 0, name: "", url: "" }); 
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 5;
 
   const lowerCaseTagItem = tagItem.toLowerCase();
   let CardsItensFilter = CardsItens.filter(CardItem =>
@@ -39,9 +41,21 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
     
   };
 
+  // Cálculo para obter os índices dos cards da página atual
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = CardsItensFilter.slice(indexOfFirstCard, indexOfLastCard);
+
+  // Função para alterar a página atual
+  const handleChangePage = (page: number) => {
+    setCurrentPage(page);
+  };
+
   return (
+    <>
+    
     <SCards>
-      {CardsItensFilter
+      {currentCards
       
       .map((CardItem: CardProps) => (
         <ItemCard key={CardItem.id}>
@@ -60,6 +74,12 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
         </ItemCard>
       ))}
       <Modal isOpen={openModal} card={selectedCard} setOpenModal={() => setOpenModal(!openModal)} />
+     
     </SCards>
+    <DividerBar/>
+      <SPagination defaultCurrent={1} total={20}  
+        pageSize={cardsPerPage}
+        onChange={handleChangePage} />
+    </>
   );
 };

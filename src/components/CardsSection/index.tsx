@@ -19,9 +19,7 @@ export const CardsSection = () => {
         </Filters>
         <DividerBar/>
         <Cards tagItem={tagItem}  orderItem={orderItem}/>
-        <DividerBar/>
-        <SPagination defaultCurrent={1} total={50} />
-      </Container>
+       </Container>
     </TCardsSection>
   )
 }

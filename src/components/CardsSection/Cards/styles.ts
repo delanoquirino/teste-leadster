@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import Image from "next/image";
+import { Pagination } from "antd";
 
 export const SCards = styled.ul`
     margin: 5em 0;
@@ -60,3 +61,11 @@ export const StyledImage = styled(Image)`
   height: 100%;
   object-fit: cover;
 `;
+
+export const SPagination = styled(Pagination)`
+ 
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    
+`
