@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={Jakarta.className}>
         <GlobalStyle/>
         {children}
-        </body>
+      </body>
     </html>
   )
 }

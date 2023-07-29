@@ -21,6 +21,7 @@ export const FeaturedSection = () => {
                 width={30}
                 height={20}
                 alt="logo leadster"
+                style={{ width: '100%', height: 'auto' }}
               ></Image>
             </span>
                         

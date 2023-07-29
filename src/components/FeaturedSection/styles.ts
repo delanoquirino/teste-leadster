@@ -15,7 +15,6 @@ export const Container = styled.div`
 
   p {
     margin-top: 15px;
-    font-size: 12px;
     text-align: center;
     span {
       font-weight: bold;
@@ -35,24 +34,24 @@ export const Content = styled.div`
     border-radius: 10px 10px 10px 0px;
 
     text-transform: uppercase;
-    font-size: 16px;
+  
     font-weight: bold;
   }
-  h2 {
-    font-size: 50px;
-    font-weight: 300;
-    margin-top: 0.4em;
-  }
+ 
 
   h1 {
     background: linear-gradient(to right, #2c83fb, #1f76f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 80px;
+    font-size: 50px;
     margin-bottom: 10px;
     padding: 0 0.3em;
   }
-
+  h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0.4em;
+  }
   span {
     background: #1f76f0;
     -webkit-background-clip: text;
@@ -60,65 +59,22 @@ export const Content = styled.div`
     position: relative;
     img {
       position: absolute;
-      right: -8px;
-      top: 16px;
+      right: -30%;
+      top: 10%;
     }
 
  
   }
 
-  @media only screen and (max-width: 500px) {
-     p {
-        font-size: 14px;
-     }
+  @media screen and (min-width: 768px) {
+            h1{
+            font-size: 90px;
+            }
 
-     h2 {
-        font-size: 30px;
-     }
-
-     h1 {
-        font-size: 60px;
-     }
-
-     span {
-    
-    img {
-      right: -13px;
-      top: 10px;
-    }
-
- 
-  }
-
-  
-
-  }
-
-  @media only screen and (max-width: 352px) {
-     p {
-        font-size: 12px;
-     }
-
-     h2 {
-        font-size: 25px;
-     }
-
-     h1 {
-        font-size: 45px;
-     }
-
-     span {
-    
-    img {
-      right: -13px;
-      top: 5px;
-    }
-
- 
-  }
-
-  
-
-  }
+            h2 {
+    font-size: 50px;
+      }
+         
+        }
 
 `;
