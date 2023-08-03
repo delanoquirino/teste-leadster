@@ -21,7 +21,7 @@ export const Modal = ({ isOpen, card, setOpenModal }: ModalProps) => {
         <ContainerModal>
           <ModalTitle><p><span>Webnar: </span>{card.name}</p> <ModalClose onClick={setOpenModal}><IoMdClose/></ModalClose></ModalTitle>
           <ModalVideo>
-          <iframe src={card.url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          <iframe src={card.url} title={card.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           </ModalVideo>
 
           <ModalDescription>

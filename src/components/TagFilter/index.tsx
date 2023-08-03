@@ -26,6 +26,7 @@ export const TagFilter = ({ tagItem,setTagItem}: TagFilterProps) => {
   ];
 
   const handleTagItemClick = (itemName: string) => {
+    
     if (itemName === tagItem) {
       setTagItem(''); 
     } else {

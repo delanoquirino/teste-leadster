@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { Container, Filters, SPagination, TCardsSection } from './styles'
+import { Container, Filters, TCardsSection } from './styles'
 import { TagFilter } from '../TagFilter'
 import { OrderList } from '../OrderList'
 import { DividerBar } from '../DividerBar'

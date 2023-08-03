@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Description, ItemCard, SCards, SPagination, StyledImage, Thumbnail } from "./styles";
-import { CardsItens } from "@/data";
+import { DataCards } from "@/data";
 import { Modal } from "@/components/Modal";
 import { DividerBar } from "@/components/DividerBar";
 
@@ -8,6 +8,7 @@ type CardProps = {
   id: number;
   name: string;
   url: string;
+  
 };
 
 export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: string } ) => {
@@ -15,9 +16,10 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
   const [selectedCard, setSelectedCard] = useState<CardProps>({ id: 0, name: "", url: "" }); 
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6;
+  const totalCards = DataCards.length;
 
   const lowerCaseTagItem = tagItem.toLowerCase();
-  let CardsItensFilter = CardsItens.filter(CardItem =>
+  let CardsItensFilter = DataCards.filter(CardItem =>
     CardItem.name.toLowerCase().includes(lowerCaseTagItem)
   );
     
@@ -76,7 +78,7 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
      
     </SCards>
     <DividerBar/>
-      <SPagination defaultCurrent={1} total={20}  
+      <SPagination defaultCurrent={1} total={totalCards}  
         pageSize={cardsPerPage}
         onChange={handleChangePage} />
     </>

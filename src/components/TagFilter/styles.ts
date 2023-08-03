@@ -19,7 +19,7 @@ export const ItemList = styled.li`
 
 export const TagButton = styled.button<TagButtonProps>`
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 20px;
   padding: 0.5em 0.5em;
   background-color: ${({ isactive }) =>
