@@ -18,7 +18,8 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
   const cardsPerPage = 6;
   const totalCards = DataCards.length;
 
-  const lowerCaseTagItem = tagItem.toLowerCase();
+   const lowerCaseTagItem = tagItem.toLowerCase();
+   
   let CardsItensFilter = DataCards.filter(CardItem =>
     CardItem.name.toLowerCase().includes(lowerCaseTagItem)
   );
@@ -36,6 +37,8 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
       b.name.localeCompare(a.name)
     );
   }
+  
+   
 
   const handleCardClick = (card: CardProps) => {
     setSelectedCard(card);
@@ -46,6 +49,8 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = CardsItensFilter.slice(indexOfFirstCard, indexOfLastCard);
+
+  const totalPaginationPages = Math.ceil(CardsItensFilter.length / cardsPerPage);
 
 
   const handleChangePage = (page: number) => {
@@ -78,8 +83,8 @@ export const Cards = ({ tagItem, orderItem  }: { tagItem: string, orderItem: str
      
     </SCards>
     <DividerBar/>
-      <SPagination defaultCurrent={1} total={totalCards}  
-        pageSize={cardsPerPage}
+      <SPagination defaultCurrent={1} total={totalPaginationPages}  
+        pageSize={1}
         onChange={handleChangePage} />
     </>
   );
