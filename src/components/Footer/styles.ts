@@ -49,11 +49,19 @@ export const Container = styled.div`
   @media only screen and (max-width: 680px) {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    
+   
     p {
       margin-top: 1em;
       font-size: 16px;
     }
+  }
+
+  @media only screen and (max-width: 330px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  
+    
+    
   }
 `;
 
